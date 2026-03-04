@@ -1,15 +1,5 @@
 import Script from 'next/script';
 
-
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      'model-viewer': any;
-    }
-  }
-}
-
-
 export default function Home() {
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans">
@@ -51,40 +41,19 @@ export default function Home() {
             </div>
           </section>
 
-          {/* 3. Right Side: The 3D Viewer Container */}
-          <section className="relative h-[500px] w-full bg-white rounded-3xl shadow-2xl border border-slate-100 overflow-hidden group">
-            <div className="absolute top-4 left-4 z-10">
-              <span className="flex items-center gap-2 text-xs font-mono text-slate-400">
-                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                INTERACTIVE_3D_VIEWER
-              </span>
+          {/* 3. Right Side: Visual Replacement for 3D Viewer */}
+          <section className="relative h-[400px] w-full bg-blue-600 rounded-3xl shadow-2xl flex items-center justify-center overflow-hidden">
+            <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+            <div className="text-center z-10 p-8">
+              <div className="text-6xl mb-4">🚀</div>
+              <h3 className="text-2xl font-bold text-white mb-2">Systems Architect</h3>
+              <p className="text-blue-100 max-w-xs mx-auto">
+                Specializing in bridging the gap between enterprise infrastructure and modern user experiences.
+              </p>
             </div>
-            
-{/* @ts-ignore */}
-<model-viewer
-  src="https://my-profile.gt.tc/wp-content/uploads/2026/03/LUPA.glb"
-              ar
-              auto-rotate
-              camera-controls
-              shadow-intensity="1"
-              environment-image="neutral"
-              exposure="1"
-              style={{ width: '100%', height: '100%', outline: 'none' }}
-              className="bg-transparent"
-            >
-
-  </model-viewer>
-
-  
           </section>
         </div>
       </main>
-
-      {/* 4. Scripts for 3D Functionality */}
-      <Script 
-        type="module" 
-        src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js" 
-      />
     </div>
   );
 }
