@@ -5,7 +5,7 @@ export default function Home() {
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans">
       {/* 1. Header/Navigation */}
       <nav className="p-6 max-w-6xl mx-auto flex justify-between items-center">
-        <h1 className="text-xl font-bold tracking-tighter">ARVIN A.</h1>
+        <h1 className="text-xl font-bold tracking-tighter">Hi! I'm ARVIN ,.</h1>
         <div className="space-x-6 text-sm font-medium text-slate-600">
           <a href="#about" className="hover:text-blue-600">About</a>
           <a href="#solutions" className="hover:text-blue-600">Solutions</a>
