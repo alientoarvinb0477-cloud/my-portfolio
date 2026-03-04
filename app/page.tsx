@@ -1,5 +1,15 @@
 import Script from 'next/script';
 
+
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      'model-viewer': any;
+    }
+  }
+}
+
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans">
@@ -50,8 +60,9 @@ export default function Home() {
               </span>
             </div>
             
-            <model-viewer
-              src="https://my-profile.gt.tc/wp-content/uploads/2026/03/LUPA.glb" 
+{/* @ts-ignore */}
+<model-viewer
+  src="https://my-profile.gt.tc/wp-content/uploads/2026/03/LUPA.glb"
               ar
               auto-rotate
               camera-controls
@@ -61,7 +72,10 @@ export default function Home() {
               style={{ width: '100%', height: '100%', outline: 'none' }}
               className="bg-transparent"
             >
-            </model-viewer>
+
+  </model-viewer>
+
+  
           </section>
         </div>
       </main>
